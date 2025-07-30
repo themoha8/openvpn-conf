@@ -99,8 +99,8 @@ create_cert() {
 
   # Create fixed ip address for new client
   echo "ifconfig-push $FREE_IP 255.255.255.0" > "${CCD_PATH}/$USERNAME"
-  #chmod 640 "${CCD_PATH}/$USERNAME"
-  #chown :$USER_OPENVPN "${CCD_PATH}/$USERNAME"
+  chmod 640 "${CCD_PATH}/$USERNAME"
+  chown :$USER_OPENVPN "${CCD_PATH}/$USERNAME"
 
   echo "CERTIFICATE CREATED"
   echo "------------------------------------------------------------------------------------------"
